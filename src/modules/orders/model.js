@@ -13,7 +13,7 @@ const insert = async ({product,clientContact,clientName,count}) => {
 
 const fetchOrders = async () => {
     try{
-        let orders = await fetch('select * from orders o inner join products p using(product_id)')
+        let orders = await fetchAll('select * from orders o inner join products p using(product_id)')
         for (let order of orders) {
             delete order.product_id
         }
