@@ -17,6 +17,7 @@ const fetchOrders = async () => {
         for (let order of orders) {
             delete order.product_id
         }
+        console.log(orders)
         return orders
     } catch(err){
         console.log(err)
