@@ -36,9 +36,7 @@ const GET = async (req,res) => {
 }
 
 const PUT = async (req,res) => {
-    const {id,active} = req.body
-    if (id && active){
-        let response = await model.updateOrders(id,active)
+        let response = await model.updateOrders(req.body)
         if (response){
             res.send({
                 status:200,
@@ -50,7 +48,6 @@ const PUT = async (req,res) => {
                 message:'bad request'
             })
         }
-    }
 }
 module.exports = {
     POST,

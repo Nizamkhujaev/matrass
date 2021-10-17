@@ -34,7 +34,7 @@ const insert = async (file,{productName,price,yuklama,kafolat,olchami,sigimi,des
             description,categoryId.category_id,
             checkStatus(status),aksiyaPrice,imgLinks
         )
-        console.log(product)
+        // console.log(product)
         return product
     } catch (err) {
         console.log(err)

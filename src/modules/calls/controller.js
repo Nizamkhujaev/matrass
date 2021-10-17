@@ -21,7 +21,7 @@ const POST = (req,res) => {
 
 const GET = async (req,res) => {
     let response = await model.fetchCalls()
-    console.log(response)
+    // console.log(response)
     if (response){
         res.send({
             status:200,

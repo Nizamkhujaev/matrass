@@ -2,7 +2,6 @@ const model = require('./model')
 
 
 const POST = async (req,res) => {
-    if (req.body != null){
         let response = await model.insert(req.body)
         if (response){
             res.send({
@@ -16,7 +15,6 @@ const POST = async (req,res) => {
                 message:"bad request"
             })
         }
-    }
 }
 
 const GET = async (req,res) => {

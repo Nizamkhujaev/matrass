@@ -11,7 +11,8 @@ const insert = async (phoneNumber) => {
 }
 
 const fetchCalls = async () => {
-    let calls = await fetchAll('select * from calls where deleted = false')
+    // let calls = await fetchAll('select * from calls where deleted = false')
+    let calls = await fetchAll('select * from calls order by id')
     return calls
 }
 

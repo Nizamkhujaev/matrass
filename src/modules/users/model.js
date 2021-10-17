@@ -22,11 +22,11 @@ const insert = async (file,{firstName,lastName,username,password}) => {
 const fetchUsers = async () => {
     let users = await fetchAll('select * from users')
     for (let user of users) {
-<<<<<<< Updated upstream
-        user.user_img = 'http://localhost:4500/' + user.user_img
-=======
+// <<<<<<< Updated upstream
+        // user.user_img = 'http://localhost:4500/' + user.user_img
+// =======
         user.user_img = user.user_img
->>>>>>> Stashed changes
+// >>>>>>> Stashed changes
     }
     return await users
 }
@@ -35,11 +35,11 @@ const Login = async (username,password) => {
 
    try {
        let user = await fetch(`select * from users where username = $1 and password = md5($2) and deleted = false`,username,password)
-<<<<<<< Updated upstream
-       user.user_img = 'http://localhost:4500/' + user.user_img
-=======
+// <<<<<<< Updated upstream
+    //    user.user_img = 'http://localhost:4500/' + user.user_img
+// =======
     //    user.user_img = user.user_img
->>>>>>> Stashed changes
+// >>>>>>> Stashed changes
        delete user.password
        console.log(user)
        return user
