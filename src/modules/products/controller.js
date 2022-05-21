@@ -20,7 +20,7 @@ const POST  = async (req,res) => {
 
 const GET = async (req,res) => {
     let response = model.fetchProducts()
-    console.log(response)
+    // console.log(response)
     if (response){
         res.send({
             status:200,
@@ -56,7 +56,7 @@ const PUT = (req,res) => {
 }
 
 const DELETE = (req,res) => {
-    const {id} = req.id
+    const {id} = req.body
     if (id){
         let response = model.deleteProducts(id)
         if (response){

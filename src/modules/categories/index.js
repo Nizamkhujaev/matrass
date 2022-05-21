@@ -6,5 +6,5 @@ router.route( '/categories')
     .post( checkToken,POST )
     .get(GET)
     .put(checkToken,PUT)
-    .delete(checkToken,DELETE)
+    .delete(DELETE)
 module.exports = router
